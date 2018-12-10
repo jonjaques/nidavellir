@@ -22,13 +22,19 @@
     "@types/webpack": "^4.4.20",
     "@types/webpack-dev-middleware": "^2.0.2",
     "@types/webpack-hot-middleware": "^2.16.4",
+    "concurrently": "^4.1.0",
     "eslint": "^5.10.0",
+    "react-native-typescript-transformer": "^1.2.10",
     "webpack-cli": "^3.1.2",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3"
   },
   "scripts": {
     "rn": "react-native",
-    "tsc": "tsc"
+    "dev:native": "react-native start",
+    "android:dev": "concurrently \"yarn android:emulator\" \"yarn dev:native\"",
+    "android:build": "cd android && ./gradlew installDebug",
+    "android:emulator": "emulator -avd nidavellir-emulator",
+    "android:emulator:create": "avdmanager create avd -n nidavellir-emulator -d pixel -k \"system-images;android-28;google_apis_playstore;x86\""
   }
 }
