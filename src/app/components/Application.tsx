@@ -4,6 +4,7 @@ import {View, Text, StyleSheet} from 'react-native'
 const styles = StyleSheet.create({
   root: {
     padding: 20,
+    paddingTop: 100,
     height: '100%',
     backgroundColor: '#000000'
   },
