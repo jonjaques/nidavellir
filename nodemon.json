@@ -1,0 +1,12 @@
+{
+  "watch": [
+    "src/web",
+    ".env",
+    "index.js",
+    "webpack.config.ts"
+  ],
+  "ext": "ts,tsx,js,jsx,json",
+  "execMap": {
+    "ts": "ts-node"
+  }
+}
